@@ -1,8 +1,8 @@
 Postgres Streaming Replication
 ==============================
 
-[![Build Status](https://travis-ci.org/nebirhos/docker-postgres-replication.svg?branch=master)](https://travis-ci.org/nebirhos/docker-postgres-replication)
-[![](https://imagelayers.io/badge/nebirhos/postgres-replication:latest.svg)](https://imagelayers.io/?images=nebirhos/postgres-replication:latest 'Get your own badge on imagelayers.io')
+[![Build Status](https://travis-ci.org/enouvoci/docker-postgis-replication.svg?branch=master)](https://travis-ci.org/enouvoci/docker-postgis-replication)
+[![](https://imagelayers.io/badge/enouvoci/docker-postgis-replication:latest.svg)](https://imagelayers.io/?images=enouvoci/docker-postgis-replication:latest 'Get your own badge on imagelayers.io')
 
 
 Enhanced version of the official Postgres image to support streaming replication
@@ -19,8 +19,8 @@ is updated.
 
 Supported tags:
 
-* 9.6, 9, latest ([9.6](https://github.com/nebirhos/docker-postgres-replication/tree/9.6))
-* 9.5 ([9.5](https://github.com/nebirhos/docker-postgres-replication/tree/9.5))
+* 9.6, 9, latest ([9.6](https://github.com/enouvoci/docker-postgis-replication/tree/9.6))
+* 9.5 ([9.5](https://github.com/enouvoci/docker-postgis-replication/tree/9.5))
 
 
 Run with Docker Compose
@@ -37,7 +37,7 @@ Run with Docker
 To run with Docker, first run the Postgres master:
 
 ```
-docker run -p 127.0.0.1:5432:5432 --name postgres-master nebirhos/postgres-replication
+docker run -p 127.0.0.1:5432:5432 --name postgres-master enouvoci/postgis-replication
 ```
 
 
@@ -47,7 +47,7 @@ Then Postgres slave(s):
 docker run -p 127.0.0.1:5433:5432 --link postgres-master \
            -e POSTGRES_MASTER_SERVICE_HOST=postgres-master \
            -e REPLICATION_ROLE=slave \
-           -t nebirhos/postgres-replication
+           -t enouvoci/postgis-replication
 ```
 
 

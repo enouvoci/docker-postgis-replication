@@ -1,7 +1,7 @@
 # -*- mode: conf -*-
-FROM postgres:9.6
+FROM mdillon/postgis:9.6
 
-MAINTAINER me@nebirhos.com
+MAINTAINER Hy Dang <hy.dang@enouvo.com>
 
 # common settings
 ENV MAX_CONNECTIONS 500
